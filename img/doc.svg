@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="document-2" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 800 800">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #babad3;
+      }
+    </style>
+  </defs>
+  <rect class="st0" x="225" y="425" width="350" height="50"/>
+  <rect class="st0" x="225" y="525" width="350" height="50"/>
+  <path class="st0" d="M100,75v650h600V75H100ZM650,675H150V125h500v550Z"/>
+  <path class="st0" d="M575,225H225v150h350v-150ZM525,325h-250v-50h250v50Z"/>
+</svg>

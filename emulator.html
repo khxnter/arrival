@@ -1,0 +1,41 @@
+---
+layout: default
+title: ARRIVAL | Emulator
+---
+
+<h3>MuOS</h3>
+<p><strong>Syncthing</strong></p>
+<p>/run/muos/storage/save/ (Storage location on device)</p>
+<p>SSH pass - muos / muos (the web client files)</p>
+<p>SSH pass - muos / muos205 (Dont know if this is something else?)</p>
+<div class="links">
+    <ul>
+        <li><a target="_blank" href="http://192.168.1.199:7070/">Syncthing RG40VXX</a></li>
+        <li><a target="_blank" href="https://127.0.0.1:8384/">Syncthing PC</a></li>
+        <li><a target="_blank" href="https://muos.dev/web/syncthing">Syncthing Guide</a></li>
+    </ul>
+</div>
+<div class="links">
+    <p><strong>RetroAchievements</strong></p>
+    <ul>
+        <li><a target="_blank" href="https://retroachievements.org/user/jumpfreya">RetroAchievements</a></li>
+    </ul>
+</div>
+<div class="links">
+    <p><strong>ROMS</strong></p>
+    <ul>
+        <li><a target="_blank" href="https://r-roms.github.io/">ROMS Download</a></li>
+    </ul>
+</div>
+
+<h3>DOSBox</h3>
+<ul>
+<li>Games are located in <strong>C:\Games\DOS\FEAR</strong></li>
+<li>The <strong>.cue file</strong> contents, has to point to the bin file. The cue file boots the bin file.</li>
+<li>DOSBox settings in the file: <strong>C:\Users\Kieran\AppData\Local\DOSBox</strong></li>
+</ul>
+<p>Paste the below at the end of the file, depending on what game you want it to autoboot.</p>
+<p class="code">mount C c:\Games\DOS<br>
+c:<br>
+imgmount D C:\Games\DOS\FEAR\fear.cue -t iso
+</p>
