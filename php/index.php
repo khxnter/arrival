@@ -1,0 +1,101 @@
+<?php
+$title = 'ARRIVAL';
+$body_class = 'home';
+
+ob_start();
+?>
+
+<div class="container intro">
+    <h2>Yep, Arrival.</h2>
+    <p>A load of notes..</p>
+</div>
+
+<div class="container main">
+
+    <div>
+        <h3>Notes</h3>
+        <ul>
+            <li>
+                <a href="/arrival/pc25.html">
+                    Living Room PC (2025)
+                </a>
+            </li>
+            <li>
+                <a href="/arrival/pc22.html">
+                    Gaming PC (2022)
+                </a>
+            </li>
+            <li>
+                <a href="/arrival/server.html">
+                    Home Server
+                </a>
+            </li>
+            <li>
+                <a href="/arrival/pdates.html">
+                    Purchase Dates
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Guides</h3>
+        <ul>
+            <li>
+                <a href="/arrival/cooking.html">
+                    Cooking
+                </a>
+            </li>
+            <li>
+                <a href="/arrival/plants.html">
+                    Plants
+                </a>
+            </li>
+            <li>
+                <a href="/arrival/tomato.html">
+                    Tomato Plants
+                </a>
+            </li>
+            <li>
+                <a href="/arrival/emulator.html">
+                    Emulator
+                </a>
+            </li>
+            <li>
+                <a href="/arrival/hiking.html">
+                    Hiking
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Docs</h3>
+        <ul>
+            <li>
+                <a href="/arrival/games.php">
+                    Games Completed
+                </a>
+            </li>
+            <li>
+                <a href="/arrival/books.html">
+                    Books Read
+                </a>
+            </li>
+            <li>
+                <a href="/arrival/docs.html">
+                    Documents
+                </a>
+            </li>
+            <li>
+                <a href="/arrival/links.html">
+                    Links
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<?php
+$content = ob_get_clean();
+require __DIR__ . '/layout.php';
