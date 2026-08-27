@@ -543,8 +543,14 @@ main .container img:not(:last-of-type) {
     .games .row ~ .row {
         border-top:0;
     }
+    .games .row.perfect .year {
+        border:0;
+    }
     .games .row.perfect {
         border: 1px solid #e1be14;
         border-top: 1px solid #e1be14;
+    }
+    .games .row.perfect + .perfect {
+        border-top:0;
     }
 }
