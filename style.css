@@ -536,7 +536,8 @@ main .container img:not(:last-of-type) {
         padding:0;
         min-height:0;
     }
-    .games .perfect .cell {
+    .games .row .perfect .cell,
+    .games .row .perfect .cell:last-of-type {
         border:1px solid #e1be14;
         border-width:1px 1px 1px 1px;
     }
