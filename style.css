@@ -363,7 +363,9 @@ main .container img:not(:last-of-type) {
     border-width:1px 0 1px 1px;
 }
 .games .perfect .cell:nth-of-type(2),
-.games .perfect .cell:nth-of-type(3) {
+.games .perfect .cell:nth-of-type(3),
+.games .perfect .cell:nth-of-type(4),
+.games .perfect .cell:nth-of-type(5) {
     border-left:1px solid #7d7aa7;
 }
 .games .perfect .cell:last-of-type {
