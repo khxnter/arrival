@@ -540,16 +540,16 @@ main .container img:not(:last-of-type) {
     .games .row.perfect .cell:last-of-type {
         border:1px solid #e1be14;
         border-width:1px 1px 1px 1px;
-        border-left:1px solid #e1be14;
+        border-left:0;
     }
     .games .row.perfect .cell:nth-of-type(2),
     .games .row.perfect .cell:nth-of-type(3),
     .games .row.perfect .cell:nth-of-type(4),
     .games .row.perfect .cell:nth-of-type(5) {
-        border-left:1px solid #e1be14;
+        border-left:0;
     }
     .games .row.perfect .cell:nth-of-type(3) {
-        border-right:1px solid #7d7aa7;
+        border-right:0;
     }
     .games .row.perfect .cell:nth-of-type(2),
     .games .row.perfect .cell:nth-of-type(3),
@@ -563,6 +563,10 @@ main .container img:not(:last-of-type) {
     }
     .games .row.perfect + .perfect .cell:first-of-type {
         border-top:0;
+    }
+    .games .row.perfect {
+        border-left:1px solid #e1be14;
+        border-right:1px solid #e1be14;
     }
     .games .row .cell.hours,
     .games .row .cell.months {
