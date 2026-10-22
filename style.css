@@ -511,16 +511,6 @@ main .container img:not(:last-of-type) {
         display: none;
         padding: 5px 8px;
     }
-    .games .perfect .cell:nth-of-type(2) {
-        border-left:0;
-        border:0;
-    }
-    .games .perfect .cell:last-of-type {
-        border-right:0;
-    }
-    .games .perfect + .perfect .cell.game {
-        border-top:0;
-    }
     .games .row > .cell.year:empty {
         display: none;
     }
