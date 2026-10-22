@@ -53,6 +53,11 @@ title: ARRIVAL | Games
     "Xbox": "xbox-games"
   };
 
+  // Zero-based column number of the unlabelled "perfect" checkbox
+  // (A = 0, B = 1, C = 2 ...). Leave as -1 to auto-detect the first
+  // column with a blank header.
+  var perfectCol = 6;
+
   function parseCSV(text) {
     var rows = [];
     var row = [];
@@ -118,21 +123,11 @@ title: ARRIVAL | Games
     return r;
   }
 
-  // Recognise common values used to mark a game as 100% complete.
+  // A ticked Google Sheets checkbox is published as TRUE.
   function isPerfect(value) {
-    var v = String(value || "")
-      .trim()
-      .toLowerCase();
+    var v = String(value || "").trim().toLowerCase();
 
-   return [
-      "true",
-      "perfect",
-      "100%",
-      "yes",
-      "1",
-      "✓",
-      "x"
-    ].indexOf(v) !== -1;
+    return ["true", "perfect", "100%", "yes", "1", "✓", "x"].indexOf(v) !== -1;
   }
 
   function render(container, games) {
@@ -150,9 +145,7 @@ title: ARRIVAL | Games
       var newYear = g.year !== lastYear;
 
       if (newYear && lastYear !== null) {
-        container.appendChild(
-          makeRow("space", "", "", "", "")
-        );
+        container.appendChild(makeRow("space", "", "", "", "", ""));
       }
 
       var notes = [];
@@ -160,7 +153,6 @@ title: ARRIVAL | Games
       if (g.complete) notes.push("100%");
       if (g.notes) notes.push(g.notes);
 
-      // Apply the "perfect" class to completed games.
       container.appendChild(
         makeRow(
           g.complete ? "perfect" : "",
@@ -207,6 +199,11 @@ title: ARRIVAL | Games
         }
       });
 
+      // The checkbox column has no header, so find it by position.
+      var perfectCol = PERFECT_COL !== -1 ? PERFECT_COL : head.indexOf("");
+
+      console.log("Headers:", head, "Perfect column index:", perfectCol);
+
       var byPlatform = {};
 
       rows.forEach(function (r) {
@@ -227,16 +224,19 @@ title: ARRIVAL | Games
           game: game,
           notes: value("notes"),
           hours: value("hours"),
-          complete: isPerfect(
-            value("perfect") || value("100% complete") || value("100%")
-          )
+          complete: isPerfect(r[6])
         });
       });
 
       Object.keys(CONTAINERS).forEach(function (platform) {
+<<<<<<< HEAD
         var container = document.getElementById(
           CONTAINERS[platform]
         );
+=======
+        var container = document.getElementById(CONTAINERS[platform]);
+
+>>>>>>> 0d6d1a96e6eade48996dd6c9d51a60ebe510a343
         if (container) {
           render(container, byPlatform[platform] || []);
         }
@@ -246,9 +246,7 @@ title: ARRIVAL | Games
       console.warn("Games sheet not loaded:", err);
 
       Object.keys(CONTAINERS).forEach(function (platform) {
-        var container = document.getElementById(
-          CONTAINERS[platform]
-        );
+        var container = document.getElementById(CONTAINERS[platform]);
 
         if (!container) return;
 
