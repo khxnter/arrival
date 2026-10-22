@@ -326,12 +326,13 @@ main .container img:not(:last-of-type) {
     justify-items: center;
 }
 .games .note {
-    width:100px;
-    max-width:100px;
-}
-.games .hours {
     width:300px;
     max-width:300px;
+}
+.games .hours,
+.games .month {
+    width:100px;
+    max-width:100px;
 }
 .games .perfect .game {
     color: #e7d05a;
