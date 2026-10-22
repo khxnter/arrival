@@ -325,10 +325,13 @@ main .container img:not(:last-of-type) {
     flex: 0 0 80px; /* fixed width for year column */
     justify-items: center;
 }
-.games .note,
+.games .note {
+    width:100px;
+    max-width:100px;
+}
 .games .hours {
-    width:250px;
-    max-width:250px;
+    width:300px;
+    max-width:300px;
 }
 .games .perfect .game {
     color: #e7d05a;
