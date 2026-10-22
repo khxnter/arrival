@@ -1,6 +1,6 @@
 (function () {
   // Paste the link from Google Sheets: File > Share > Publish to web > "Games Completed" tab > CSV
-  var CSV_URL = "PASTE_PUBLISHED_CSV_LINK_HERE";
+  var CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTlOhBrk_SZ4vop6Rx6jpeitEeiJ76uVKOYnsoU1PGKZF_pINkKcfdBbxKwdZwgtw/pubhtml?gid=1187487172&single=true";
 
   // Maps the sheet's Platform value to the id of the <div class="games"> on the page
   var CONTAINERS = { "PC": "pc-games", "Xbox": "xbox-games" };
