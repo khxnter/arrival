@@ -505,7 +505,9 @@ main .container img:not(:last-of-type) {
         border:0;
     }
     .games .row.header > .cell.year,
-    .games .row.header > .cell.note {
+    .games .row.header > .cell.note,
+    .games .row.header > .cell.month,
+    .games .row.header > .cell.hours {
         display: none;
         padding: 5px 8px;
     }
@@ -562,5 +564,9 @@ main .container img:not(:last-of-type) {
     }
     .games .row.perfect + .perfect {
         border-top:0;
+    }
+    .games .row > .cell.hours,
+    .games .row > .cell.month {
+        flex: 1 50%;
     }
 }
