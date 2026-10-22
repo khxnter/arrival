@@ -153,11 +153,11 @@ title: ARRIVAL | Games
         );
       }
 
+      
       var notes = [];
 
       if (g.complete) notes.push("100%");
       if (g.notes) notes.push(g.notes);
-      if (g.month) notes.push(g.month);
 
       // Apply the "perfect" class to completed games.
       container.appendChild(
@@ -166,6 +166,7 @@ title: ARRIVAL | Games
           newYear ? g.year : "",
           g.game,
           g.hours ? g.hours + "h" : "",
+          g.month,
           notes.join(" / ")
         )
       );
