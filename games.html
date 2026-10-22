@@ -175,7 +175,7 @@ title: ARRIVAL | Games
     });
   }
 
-  fetch(CSV_URL)
+  fetch(CSV_URL + "&t=" + Date.now())
     .then(function (r) {
       if (!r.ok) {
         throw new Error("HTTP " + r.status);
@@ -226,7 +226,7 @@ title: ARRIVAL | Games
           game: game,
           notes: value("notes"),
           hours: value("hours"),
-          complete: isPerfect(value("100% complete"))
+          complete: isPerfect(value("perfect"))
         });
       });
 
