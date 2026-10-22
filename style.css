@@ -556,6 +556,11 @@ main .container img:not(:last-of-type) {
     .games .row.perfect .cell:nth-of-type(4) {
         border-bottom:1px solid #7d7aa7;
     }
+    .games .row.perfect .cell:nth-of-type(3),
+    .games .row.perfect .cell:nth-of-type(4),
+    .games .row.perfect .cell:nth-of-type(5) {
+        border-top:1px solid #7d7aa7;
+    }
     .games .row .cell.hours,
     .games .row .cell.months {
         display: none;
