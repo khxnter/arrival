@@ -56,7 +56,7 @@ title: ARRIVAL | Games
   // Zero-based column number of the unlabelled "perfect" checkbox
   // (A = 0, B = 1, C = 2 ...). Leave as -1 to auto-detect the first
   // column with a blank header.
-  var PERFECT_COL = -1;
+  var perfectCol = 6;
 
   function parseCSV(text) {
     var rows = [];
@@ -224,7 +224,7 @@ title: ARRIVAL | Games
           game: game,
           notes: value("notes"),
           hours: value("hours"),
-          complete: perfectCol !== -1 && isPerfect(r[perfectCol])
+          complete: isPerfect(r[6])
         });
       });
 
