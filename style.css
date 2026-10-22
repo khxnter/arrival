@@ -541,6 +541,7 @@ main .container img:not(:last-of-type) {
         border:1px solid #e1be14;
         border-width:1px 1px 1px 1px;
         border-left:0;
+        border-right:0;
     }
     .games .row.perfect .cell:nth-of-type(2),
     .games .row.perfect .cell:nth-of-type(3),
@@ -554,7 +555,7 @@ main .container img:not(:last-of-type) {
     .games .row.perfect .cell:nth-of-type(2),
     .games .row.perfect .cell:nth-of-type(3),
     .games .row.perfect .cell:nth-of-type(4) {
-        border-bottom:1px solid #7d7aa7;
+        border-bottom:0;
     }
     .games .row.perfect .cell:nth-of-type(3),
     .games .row.perfect .cell:nth-of-type(4),
