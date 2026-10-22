@@ -548,6 +548,14 @@ main .container img:not(:last-of-type) {
     .games .row.perfect .cell:nth-of-type(5) {
         border-left:1px solid #e1be14;
     }
+    .games .row.perfect .cell:nth-of-type(3) {
+        border-right:1px solid #7d7aa7;
+    }
+    .games .row.perfect .cell:nth-of-type(2),
+    .games .row.perfect .cell:nth-of-type(3),
+    .games .row.perfect .cell:nth-of-type(4) {
+        border-bottom:1px solid #7d7aa7;
+    }
     .games .row ~ .row {
         border-top:0;
     }
