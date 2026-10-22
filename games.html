@@ -1,125 +1,252 @@
+
 ---
 layout: default
 title: ARRIVAL | Games
 ---
-        <h3> Games Completed </h3>
 
-        <div class="games" id="pc-games">
-          <div class="row header">
-            <div class="cell year">Year</div>
-            <div class="cell game">PC Games</div>
-            <div class="cell note">Notes</div>
-          </div>
-          <div class="row loading">
-            <div class="cell year"></div>
-            <div class="cell game">Loading...</div>
-            <div class="cell note"></div>
-          </div>
-        </div>
+<h3>Games Completed</h3>
 
-        <div class="games" id="xbox-games">
-          <div class="row header">
-            <div class="cell year">Year</div>
-            <div class="cell game">XBOX Games</div>
-            <div class="cell note"></div>
-          </div>
-          <div class="row loading">
-            <div class="cell year"></div>
-            <div class="cell game">Loading...</div>
-            <div class="cell note"></div>
-          </div>
-        </div>
+<div class="games" id="pc-games">
+  <div class="row header">
+    <div class="cell year">Year</div>
+    <div class="cell game">PC Games</div>
+    <div class="cell hours">Hours</div>
+    <div class="cell note">Notes</div>
+  </div>
+  <div class="row loading">
+    <div class="cell year"></div>
+    <div class="cell game">Loading...</div>
+    <div class="cell hours"></div>
+    <div class="cell note"></div>
+  </div>
+</div>
+
+<div class="games" id="xbox-games">
+  <div class="row header">
+    <div class="cell year">Year</div>
+    <div class="cell game">XBOX Games</div>
+    <div class="cell hours">Hours</div>
+    <div class="cell note"></div>
+  </div>
+  <div class="row loading">
+    <div class="cell year"></div>
+    <div class="cell game">Loading...</div>
+    <div class="cell hours"></div>
+    <div class="cell note"></div>
+  </div>
+</div>
 
 <script>
 (function () {
-  // Paste the link from Google Sheets: File > Share > Publish to web > "Games Completed" tab > CSV
+  // Google Sheets: File > Share > Publish to web > Games Completed > CSV
   var CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTlOhBrk_SZ4vop6Rx6jpeitEeiJ76uVKOYnsoU1PGKZF_pINkKcfdBbxKwdZwgtw/pub?gid=1187487172&single=true&output=csv";
 
-  // Maps the sheet's Platform value to the id of the <div class="games"> on the page
-  var CONTAINERS = { "PC": "pc-games", "Xbox": "xbox-games" };
+  // Sheet platform values mapped to page container IDs
+  var CONTAINERS = {
+    "PC": "pc-games",
+    "Xbox": "xbox-games"
+  };
 
   function parseCSV(text) {
-    var rows = [], row = [], field = "", inQuotes = false;
+    var rows = [];
+    var row = [];
+    var field = "";
+    var inQuotes = false;
+
     for (var i = 0; i < text.length; i++) {
       var c = text[i];
+
       if (inQuotes) {
-        if (c === '"' && text[i + 1] === '"') { field += '"'; i++; }
-        else if (c === '"') { inQuotes = false; }
-        else { field += c; }
-      } else if (c === '"') { inQuotes = true; }
-      else if (c === ",") { row.push(field); field = ""; }
-      else if (c === "\n" || c === "\r") {
+        if (c === '"' && text[i + 1] === '"') {
+          field += '"';
+          i++;
+        } else if (c === '"') {
+          inQuotes = false;
+        } else {
+          field += c;
+        }
+      } else if (c === '"') {
+        inQuotes = true;
+      } else if (c === ",") {
+        row.push(field);
+        field = "";
+      } else if (c === "\n" || c === "\r") {
         if (c === "\r" && text[i + 1] === "\n") i++;
-        row.push(field); field = ""; rows.push(row); row = [];
-      } else { field += c; }
+        row.push(field);
+        field = "";
+        rows.push(row);
+        row = [];
+      } else {
+        field += c;
+      }
     }
-    if (field !== "" || row.length) { row.push(field); rows.push(row); }
+
+    if (field !== "" || row.length) {
+      row.push(field);
+      rows.push(row);
+    }
+
     return rows;
   }
 
   function el(tag, cls, text) {
     var d = document.createElement(tag);
     d.className = cls;
-    if (text) d.textContent = text;
+
+    if (text !== undefined && text !== null) {
+      d.textContent = text;
+    }
+
     return d;
   }
 
-  function makeRow(cls, year, game, note) {
+  function makeRow(cls, year, game, hours, note) {
     var r = el("div", cls ? "row " + cls : "row");
+
     r.appendChild(el("div", "cell year", year));
     r.appendChild(el("div", "cell game", game));
+    r.appendChild(el("div", "cell hours", hours));
     r.appendChild(el("div", "cell note", note));
+
     return r;
+  }
+
+  // Recognise common values used to mark a game as 100% complete.
+  function isPerfect(value) {
+    var v = String(value || "")
+      .trim()
+      .toLowerCase();
+
+    return [
+      "true",
+      "perfect",
+      "100%",
+      "yes",
+      "1"
+    ].indexOf(v) !== -1;
   }
 
   function render(container, games) {
     var header = container.querySelector(".row.header");
+
     container.innerHTML = "";
-    if (header) container.appendChild(header);
+
+    if (header) {
+      container.appendChild(header);
+    }
+
     var lastYear = null;
+
     games.forEach(function (g) {
       var newYear = g.year !== lastYear;
-      if (newYear && lastYear !== null) container.appendChild(makeRow("space", "", "", ""));
-      var parts = [];
-      if (g.complete) parts.push("100%");
-      if (g.notes) parts.push(g.notes);
-      if (g.hours) parts.push(g.hours + "h");
-      if (g.month) parts.push(g.month);
-      container.appendChild(makeRow(g.complete ? "perfect" : "", newYear ? g.year : "", g.game, parts.join(" / ")));
+
+      if (newYear && lastYear !== null) {
+        container.appendChild(
+          makeRow("space", "", "", "", "")
+        );
+      }
+
+      var notes = [];
+
+      if (g.complete) notes.push("100%");
+      if (g.notes) notes.push(g.notes);
+      if (g.month) notes.push(g.month);
+
+      // Apply the "perfect" class to completed games.
+      container.appendChild(
+        makeRow(
+          g.complete ? "perfect" : "",
+          newYear ? g.year : "",
+          g.game,
+          g.hours ? g.hours + "h" : "",
+          notes.join(" / ")
+        )
+      );
+
       lastYear = g.year;
     });
   }
 
   fetch(CSV_URL)
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(function (r) {
+      if (!r.ok) {
+        throw new Error("HTTP " + r.status);
+      }
+
+      return r.text();
+    })
     .then(function (text) {
       var rows = parseCSV(text);
-      var head = rows.shift().map(function (h) { return h.trim().toLowerCase(); });
-      var col = function (name) { return head.indexOf(name); };
+
+      if (!rows.length) {
+        throw new Error("The CSV is empty");
+      }
+
+      // Normalise headers to avoid issues with capitalisation or spaces.
+      var head = rows.shift().map(function (h) {
+        return h.replace(/^\uFEFF/, "").trim().toLowerCase();
+      });
+
+      var col = function (name) {
+        return head.indexOf(name.toLowerCase());
+      };
+
+      // Check for required columns.
+      ["game", "platform", "year"].forEach(function (name) {
+        if (col(name) === -1) {
+          throw new Error('Missing "' + name + '" column in Google Sheets');
+        }
+      });
+
       var byPlatform = {};
+
       rows.forEach(function (r) {
-        var game = (r[col("game")] || "").trim();
+        function value(name) {
+          var index = col(name);
+          return index === -1 ? "" : String(r[index] || "").trim();
+        }
+
+        var game = value("game");
+
         if (!game) return;
-        var platform = (r[col("platform")] || "").trim();
+
+        var platform = value("platform");
+
         (byPlatform[platform] = byPlatform[platform] || []).push({
-          year: (r[col("year")] || "").trim(),
-          month: (r[col("month")] || "").trim(),
+          year: value("year"),
+          month: value("month"),
           game: game,
-          notes: (r[col("notes")] || "").trim(),
-          hours: (r[col("hours")] || "").trim(),
-          complete: (r[col("100% complete")] || "").trim().toUpperCase() === "TRUE"
+          notes: value("notes"),
+          hours: value("hours"),
+          complete: isPerfect(value("100% complete"))
         });
       });
-      Object.keys(CONTAINERS).forEach(function (p) {
-        var container = document.getElementById(CONTAINERS[p]);
-        if (container && byPlatform[p] && byPlatform[p].length) render(container, byPlatform[p]);
+
+      Object.keys(CONTAINERS).forEach(function (platform) {
+        var container = document.getElementById(
+          CONTAINERS[platform]
+        );
+
+        if (container) {
+          render(container, byPlatform[platform] || []);
+        }
       });
     })
     .catch(function (err) {
       console.warn("Games sheet not loaded:", err);
-      Object.keys(CONTAINERS).forEach(function (p) {
-        var msg = document.querySelector("#" + CONTAINERS[p] + " .loading .game");
-        if (msg) msg.textContent = "Couldn't load the games list.";
+
+      Object.keys(CONTAINERS).forEach(function (platform) {
+        var container = document.getElementById(
+          CONTAINERS[platform]
+        );
+
+        if (!container) return;
+
+        var msg = container.querySelector(".loading .game");
+
+        if (msg) {
+          msg.textContent = "Couldn't load the games list.";
+        }
       });
     });
 })();
