@@ -11,12 +11,14 @@ title: ARRIVAL | Games
     <div class="cell year">Year</div>
     <div class="cell game">PC Games</div>
     <div class="cell hours">Hours</div>
+    <div class="cell hours">Month</div>
     <div class="cell note">Notes</div>
   </div>
   <div class="row loading">
     <div class="cell year"></div>
     <div class="cell game">Loading...</div>
     <div class="cell hours"></div>
+    <div class="cell month"></div>
     <div class="cell note"></div>
   </div>
 </div>
@@ -26,12 +28,14 @@ title: ARRIVAL | Games
     <div class="cell year">Year</div>
     <div class="cell game">XBOX Games</div>
     <div class="cell hours">Hours</div>
-    <div class="cell note"></div>
+    <div class="cell month">Month</div>
+    <div class="cell note">Notes</div>
   </div>
   <div class="row loading">
     <div class="cell year"></div>
     <div class="cell game">Loading...</div>
     <div class="cell hours"></div>
+    <div class="cell month"></div>
     <div class="cell note"></div>
   </div>
 </div>
@@ -102,12 +106,13 @@ title: ARRIVAL | Games
     return d;
   }
 
-  function makeRow(cls, year, game, hours, note) {
+  function makeRow(cls, year, game, hours, month, note) {
     var r = el("div", cls ? "row " + cls : "row");
 
     r.appendChild(el("div", "cell year", year));
     r.appendChild(el("div", "cell game", game));
     r.appendChild(el("div", "cell hours", hours));
+    r.appendChild(el("div", "cell month", month));
     r.appendChild(el("div", "cell note", note));
 
     return r;
