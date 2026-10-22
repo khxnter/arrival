@@ -124,12 +124,14 @@ title: ARRIVAL | Games
       .trim()
       .toLowerCase();
 
-    return [
+   return [
       "true",
       "perfect",
       "100%",
       "yes",
-      "1"
+      "1",
+      "✓",
+      "x"
     ].indexOf(v) !== -1;
   }
 
@@ -225,7 +227,9 @@ title: ARRIVAL | Games
           game: game,
           notes: value("notes"),
           hours: value("hours"),
-          complete: isPerfect(value("100% complete"))
+          complete: isPerfect(
+            value("perfect") || value("100% complete") || value("100%")
+          )
         });
       });
 
