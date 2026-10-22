@@ -325,7 +325,8 @@ main .container img:not(:last-of-type) {
     flex: 0 0 80px; /* fixed width for year column */
     justify-items: center;
 }
-.games .note {
+.games .note,
+.games .hours {
     width:250px;
     max-width:250px;
 }
