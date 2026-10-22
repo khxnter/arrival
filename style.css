@@ -329,10 +329,13 @@ main .container img:not(:last-of-type) {
     width:300px;
     max-width:300px;
 }
-.games .hours,
+.games .hours {
+    width:70px;
+    max-width:70px;
+}
 .games .month {
-    width:100px;
-    max-width:100px;
+    width:75px;
+    max-width:75px;
 }
 .games .perfect .game {
     color: #e7d05a;
