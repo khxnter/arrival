@@ -527,8 +527,11 @@ main .container img:not(:last-of-type) {
     }
     #pc-games.games .row > .cell.month:not(:empty):after,
     #pc-games.games .row > .cell.hours:not(:empty):after {
-        content:'/';
-        margin-left: 5px;
+        content:'';
+        background-image: url(img/links.svg);
+        background-position:right center;
+        background-size:20px;
+        background-repeat:no-repeat;
     }
     .games .row > .cell.year:empty {
         display: none;
