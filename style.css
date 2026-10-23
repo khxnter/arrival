@@ -526,7 +526,7 @@ main .container img:not(:last-of-type) {
         padding: 5px 8px;
     }
     .games .row > .cell.hours:not(:empty) ~ .month:not(:empty),
-    .games .row > .cell.month:not(:empty) ~ .notes:not(:empty) {
+    .games .row > .cell.month:not(:empty) ~ .note:not(:empty) {
         background-image: url(img/dot.svg);
         background-repeat:no-repeat;
         background-position:left center;
