@@ -533,8 +533,8 @@ main .container img:not(:last-of-type) {
         background-image: url(img/dot.svg);
         background-repeat:no-repeat;
         background-position:left center;
-        background-size:12px;
-        padding-left:4px;
+        background-size:4px;
+        padding-left:12px;
     }
     .games .row > .cell.year:empty {
         display: none;
