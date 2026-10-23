@@ -494,7 +494,7 @@ main .container img:not(:last-of-type) {
         flex-wrap: wrap;
         position: relative;
         border: 1px solid #7d7aa7;
-        background-color:#48476c;
+        background-color:#33315f;
     }
     .games .row ~ .row {
         border-top:0;
