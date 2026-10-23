@@ -525,8 +525,8 @@ main .container img:not(:last-of-type) {
         display: none;
         padding: 5px 8px;
     }
-    .games .row > .cell.hours:not(:empty) .month:not(:empty),
-    .games .row > .cell.month:not(:empty) .notes:not(:empty) {
+    .games .row > .cell.hours:not(:empty) ~ .month:not(:empty),
+    .games .row > .cell.month:not(:empty) ~ .notes:not(:empty) {
         padding-right: 20px;
         background-image: url(img/dot.svg);
         background-repeat:no-repeat;
