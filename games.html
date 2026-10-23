@@ -106,13 +106,13 @@ title: ARRIVAL | Games
     return d;
   }
 
-  function makeRow(cls, year, game, hours, month, note) {
+  function makeRow(cls, year, game, month, hours, note) {
     var r = el("div", cls ? "row " + cls : "row");
 
     r.appendChild(el("div", "cell year", year));
     r.appendChild(el("div", "cell game", game));
-    r.appendChild(el("div", "cell hours", hours));
     r.appendChild(el("div", "cell month", month));
+    r.appendChild(el("div", "cell hours", hours));
     r.appendChild(el("div", "cell note", note));
 
     return r;
