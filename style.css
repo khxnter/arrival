@@ -563,13 +563,10 @@ main .container img:not(:last-of-type) {
         border:1px solid #e1be14;
     }
     .games .row.perfect ~ .row.perfect {
-        border-top:1px solid #e1be14;
+        border-top:0;
     }
     .games .row.perfect > .cell {
         border:0;
-    }
-    .games .row ~ .row {
-        border-top:0;
     }
     .games .row.perfect + .row:not(.perfect) {
         border-top:1px solid #7d7aa7;
