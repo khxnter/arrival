@@ -525,13 +525,13 @@ main .container img:not(:last-of-type) {
         display: none;
         padding: 5px 8px;
     }
-    #pc-games.games .row > .cell.month:not(:empty):after,
-    #pc-games.games .row > .cell.hours:not(:empty):after {
-        content:'';
+    #pc-games.games .row > .cell.month:not(:empty),
+    #pc-games.games .row > .cell.hours:not(:empty) {
         background-image: url(img/links.svg);
         background-position:right center;
         background-size:20px;
         background-repeat:no-repeat;
+        padding-right:40px;
     }
     .games .row > .cell.year:empty {
         display: none;
