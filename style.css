@@ -521,6 +521,10 @@ main .container img:not(:last-of-type) {
         display: none;
         padding: 5px 8px;
     }
+    .games .row.header > .cell.month:not(:empty):after,
+    .games .row.header > .cell.hours:not(:empty):after {
+        content:'/';
+    }
     .games .row > .cell.year:empty {
         display: none;
     }
