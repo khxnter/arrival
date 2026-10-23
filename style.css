@@ -510,8 +510,12 @@ main .container img:not(:last-of-type) {
         max-width:100%;
         flex: 100%;
         border:0;
+        border-bottom:0;
     }
     .games .row .cell:last-of-type {
+        border:0;
+    }
+    .games .row:last-of-type .cell {
         border:0;
     }
     .games .row.header > .cell.year,
