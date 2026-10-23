@@ -496,6 +496,9 @@ main .container img:not(:last-of-type) {
         border: 1px solid #7d7aa7;
         background-color:#48476c;
     }
+    .games .row.game {
+        background-color:#171630;
+    }
     .games .row.space {
         border:0;
     }
@@ -525,7 +528,6 @@ main .container img:not(:last-of-type) {
     }
     .games .perfect .game {
         padding-right: 40px;
-        background-color:#171630;
     }
     .games .perfect .game:after {
         position: absolute;
