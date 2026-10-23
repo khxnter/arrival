@@ -496,7 +496,10 @@ main .container img:not(:last-of-type) {
         border: 1px solid #7d7aa7;
         background-color:#48476c;
     }
-    .games .row.game {
+    .games .row:nth-of-type(even) .cell {
+        background-color:transparent;
+    }
+    .games .row .cell.game {
         background-color:#171630;
     }
     .games .row.space {
