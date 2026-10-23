@@ -537,7 +537,6 @@ main .container img:not(:last-of-type) {
         flex:none;
         width:auto;
         font-size:14px;
-        background-color: rgba(255, 255, 255, .1);
     }
     .games .row > .cell:empty {
         padding:0;
@@ -584,18 +583,5 @@ main .container img:not(:last-of-type) {
     }
     .games .row.perfect + .row:not(.perfect) {
         border-top:1px solid #7d7aa7;
-    }
-    .games .row.perfect .year {
-     
-    }
-    .games .row.perfect {
-
-    }
-    .games .row.perfect + .perfect {
-
-    }
-    .games .row > .cell.hours,
-    .games .row > .cell.month {
-        flex: 1 50%;
     }
 }
