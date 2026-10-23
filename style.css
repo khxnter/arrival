@@ -528,15 +528,6 @@ main .container img:not(:last-of-type) {
         display: none;
         padding: 5px 8px;
     }
-    .games .row > .cell.hours:not(:empty) ~ .month:not(:empty),
-    .games .row > .cell.month:not(:empty) ~ .note:not(:empty),
-    .games .row > .cell.hours:not(:empty) ~ .note:not(:empty) {
-        background-image: url(img/dot.svg);
-        background-repeat:no-repeat;
-        background-position:left center;
-        background-size:4px;
-        padding-left:12px;
-    }
     .games .row > .cell.year:empty {
         display: none;
     }
