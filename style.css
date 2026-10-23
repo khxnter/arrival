@@ -524,6 +524,7 @@ main .container img:not(:last-of-type) {
     .games .row > .cell.month:not(:empty):after,
     .games .row > .cell.hours:not(:empty):after {
         content:'/';
+        margin-left: 15px;
     }
     .games .row > .cell.year:empty {
         display: none;
