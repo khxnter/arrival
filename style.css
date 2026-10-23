@@ -525,10 +525,9 @@ main .container img:not(:last-of-type) {
         display: none;
         padding: 5px 8px;
     }
-    .games .row.header > .cell.month,
-    .games .row.header > .cell.hours {
+    .games .row > .cell.month,
+    .games .row > .cell.hours {
         padding-right: 20px;
-        display: inline-block;
         background-image: url(img/stars.svg);
         background-repeat:no-repeat;
         background-position:right 8px center;
