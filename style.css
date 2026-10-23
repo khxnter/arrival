@@ -521,8 +521,8 @@ main .container img:not(:last-of-type) {
         display: none;
         padding: 5px 8px;
     }
-    .games .row > .cell.month:not(:empty):after,
-    .games .row > .cell.hours:not(:empty):after {
+    #pc-games.games .row > .cell.month:not(:empty):after,
+    #pc-games.games .row > .cell.hours:not(:empty):after {
         content:'/';
         margin-left: 15px;
     }
