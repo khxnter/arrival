@@ -554,38 +554,8 @@ main .container img:not(:last-of-type) {
     .games .row.perfect {
         border:0;
     }
-    .games .row.perfect .cell,
-    .games .row.perfect .cell:last-of-type {
-        border:1px solid #e1be14;
-        border-width:1px 1px 1px 1px;
-        border-left:0;
-        border-right:0;
-    }
-    .games .row.perfect .cell:nth-of-type(2),
-    .games .row.perfect .cell:nth-of-type(3),
-    .games .row.perfect .cell:nth-of-type(4),
-    .games .row.perfect .cell:nth-of-type(5) {
-        border-left:0;
-    }
-    .games .row.perfect .cell:nth-of-type(3) {
-        border-right:0;
-    }
-    .games .row.perfect .cell:nth-of-type(2),
-    .games .row.perfect .cell:nth-of-type(3),
-    .games .row.perfect .cell:nth-of-type(4) {
-        border-bottom:0;
-    }
-    .games .row.perfect .cell:nth-of-type(3),
-    .games .row.perfect .cell:nth-of-type(4),
-    .games .row.perfect .cell:nth-of-type(5) {
-        border-top:0;
-    }
-    .games .row.perfect + .perfect .cell:nth-of-type(2) {
-        border-top:0;
-    }
     .games .row.perfect {
-        border-left:1px solid #e1be14;
-        border-right:1px solid #e1be14;
+        border:1px solid #e1be14;
     }
     .games .row ~ .row {
         border-top:0;
