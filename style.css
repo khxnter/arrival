@@ -530,7 +530,7 @@ main .container img:not(:last-of-type) {
         padding-right: 20px;
         background-image: url(img/stars.svg);
         background-repeat:no-repeat;
-        background-position:right 8px center;
+        background-position:right center;
         background-size:14px;
     }
     .games .row > .cell.year:empty {
@@ -570,5 +570,8 @@ main .container img:not(:last-of-type) {
     }
     .games .row.perfect > .cell {
         border:0;
+    }
+    .games .row.perfect + .row:not(.perfect):not(.space) {
+        border-top:1px solid #7d7aa7;
     }
 }
