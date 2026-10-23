@@ -575,7 +575,7 @@ main .container img:not(:last-of-type) {
     .games .row.perfect > .cell {
         border:0;
     }
-    .games .row.perfect ~ .row,
+    .games .row.perfect ~ .row:not(.perfect),
     .games .row.perfect + .row:not(.perfect):not(.space) {
         border-top:1px solid #7d7aa7;
     }
