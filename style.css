@@ -491,6 +491,9 @@ main .container img:not(:last-of-type) {
         margin-bottom:10px;
     }
     .games .row {
+        background-color:#171630;
+    }
+    .games .row {
         flex-wrap: wrap;
         position: relative;
         border: 1px solid #7d7aa7;
