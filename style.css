@@ -413,6 +413,9 @@ body.games main {
 body.games header {
     background-color:#272727;
 }
+.games_container .row .cell.game {
+    background-color:#252523;
+}
 @media(max-width:900px) {
     .container p .box {
         padding:20px;
@@ -516,9 +519,6 @@ body.games header {
     .games_container .row:nth-of-type(even) .cell {
         background-color:transparent;
     }
-    .games_container .row .cell.game {
-        background-color:#252523;
-    }
     .games_container .row.space {
         border:0;
     }
@@ -584,5 +584,197 @@ body.games header {
     .games_container .row.perfect ~ .row:not(.perfect),
     .games_container .row.perfect + .row:not(.perfect):not(.space) {
         border-top:1px solid #a19d84;
+    }
+}
+
+/* Books */
+.books {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom:40px;
+}
+.books .row {
+    display: flex;
+    padding: 0 0;
+    align-items:center;
+    align-items: stretch;
+}
+.books .header {
+    font-variation-settings: "wght" 600;
+}
+.books .header .cell {
+    padding:20px 8px;
+}
+.books .row:nth-of-type(even) .cell {
+    background-color:#171630;
+}
+.books .header .cell.game {
+    justify-content: center;
+}
+.books .cell {
+    flex: 1;
+    font-size:16px;
+    line-height:1.4;
+    min-height:36px;
+    padding: 8px 8px;
+    align-items:center;
+    display: flex;
+    border:1px solid #7d7aa7;
+    border-width:1px 0 0 1px;
+}
+.books .row:last-of-type .cell {
+    border-bottom:1px solid #7d7aa7;
+}
+.books .row .cell:last-of-type {
+    border-right:1px solid #7d7aa7;
+}
+.books .year {
+    width:80px;
+    max-width:80px;
+    flex: 0 0 80px; /* fixed width for year column */
+    justify-items: center;
+}
+.books .note {
+    width:300px;
+    max-width:300px;
+}
+.books .hours {
+    width:70px;
+    max-width:70px;
+}
+.books .month {
+    width:75px;
+    max-width:75px;
+}
+.books .perfect .game {
+    color: #e7d05a;
+}
+.books .perfect .cell {
+    padding: 5px 8px;
+}
+.books .perfect .game:after {
+    content:'';
+    width:24px;
+    min-width:24px;
+    height:24px;
+    margin-left:10px;
+    display: inline-block;
+    background-image: url(img/stars.svg);
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.books .space {
+  background: transparent;
+  border: none;
+}
+.books .perfect .cell {
+    border:1px solid #e1be14;
+    border-width:1px 0 1px 1px;
+}
+.books .perfect .cell:nth-of-type(2),
+.books .perfect .cell:nth-of-type(3),
+.books .perfect .cell:nth-of-type(4),
+.books .perfect .cell:nth-of-type(5) {
+    border-left:1px solid #7d7aa7;
+}
+.books .perfect .cell:last-of-type {
+    border-right:1px solid #e1be14;
+}
+.books .perfect + .perfect > .cell {
+    border-top:0;
+}
+.books .perfect + .row > .cell {
+    border-top:0;
+}
+@media(max-width:900px) {
+    .books .row {
+        flex-wrap: wrap;
+        position: relative;
+        border: 1px solid #7d7aa7;
+        background-color:#33315f;
+    }
+    .books .row ~ .row {
+        border-top:0;
+    }
+    .books .row:nth-of-type(even) .cell {
+        background-color:transparent;
+    }
+    .books .row .cell.game {
+        background-color:#171630;
+    }
+    .books .row.space {
+        border:0;
+    }
+    .books .row > .cell {
+        width:100%;
+        max-width:100%;
+        flex: 100%;
+        border:0;
+        border-bottom:0;
+    }
+    .books .row .cell:last-of-type {
+        border:0;
+    }
+    .books .row:last-of-type .cell {
+        border:0;
+    }
+    .books .row.header > .cell.year,
+    .books .row.header > .cell.note,
+    .books .row.header > .cell.month,
+    .books .row.header > .cell.hours {
+        display: none;
+        padding: 5px 8px;
+    }
+    .books .row > .cell.hours:not(:empty) ~ .month:not(:empty),
+    .books .row > .cell.month:not(:empty) ~ .note:not(:empty),
+    .books .row > .cell.hours:not(:empty) ~ .note:not(:empty) {
+        background-image: url(img/dot.svg);
+        background-repeat:no-repeat;
+        background-position:left center;
+        background-size:4px;
+        padding-left:12px;
+    }
+    .books .row > .cell.year:empty {
+        display: none;
+    }
+    .books .row > .cell.year:not(:empty) {
+        font-weight:bold;
+        background-color:#0f0e18;
+        justify-content: center;
+    }
+    .books .perfect .game {
+        padding-right: 40px;
+    }
+    .books .perfect .game:after {
+        position: absolute;
+        right: 10px;
+    }
+    .books .row > .cell.note,
+    .books .row > .cell.hours,
+    .books .row > .cell.month {
+        flex:none;
+        width:auto;
+        font-size:14px;
+    }
+    .books .row > .cell:empty {
+        padding:0;
+        min-height:0;
+    }
+    .books .row.perfect {
+        border:0;
+    }
+    .books .row.perfect {
+        border:1px solid #e1be14;
+    }
+    .books .row.perfect + .row.perfect {
+        border-top:0;
+    }
+    .books .row.perfect > .cell {
+        border:0;
+    }
+    .books .row.perfect ~ .row:not(.perfect),
+    .books .row.perfect + .row:not(.perfect):not(.space) {
+        border-top:1px solid #7d7aa7;
     }
 }
