@@ -301,12 +301,10 @@ main .container img:not(:last-of-type) {
 }
 .games_container .header .cell {
     padding:20px 8px;
+    justify-content: center;
 }
 .games_container .row:nth-of-type(even) .cell {
     background-color:#252523;
-}
-.games_container .header .cell.game {
-    justify-content: center;
 }
 .games_container .cell {
     flex: 1;
