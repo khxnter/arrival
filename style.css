@@ -421,13 +421,10 @@ main .container img:not(:last-of-type) {
 }
 body.games {
     color:#cac5b1;
-    background-color:#51514f;
+    background-color:#1d1c1a;
 }
 body.games h3 {
     color:#e0e0e0;
-}
-body.games main {
-    background-color:#51514f;
 }
 .games_container .row {
     background-color:#252523;
