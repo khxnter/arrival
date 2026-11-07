@@ -333,6 +333,18 @@ main .container img:not(:last-of-type) {
     flex: 0 0 80px; /* fixed width for year column */
     justify-items: center;
 }
+.games_container .year:before {
+    content:'';
+    width:36px;
+    min-width:36px;
+    height:36px;
+    margin-left:10px;
+    display: inline-block;
+    background-image: url(img/torch.png);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:contain;
+}
 .games_container .note {
     width:300px;
     max-width:300px;
