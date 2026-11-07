@@ -416,6 +416,9 @@ body.games h3 {
     color:#cac5b1;
 }
 body.games main,
+body.games header {
+    background-color:#1d1c1a;
+}
 .games_container .row {
     background-color:#252523;
 }
@@ -443,9 +446,6 @@ body.games main,
         width:36px;
         min-width:36px;
         height:36px;
-    }
-    body.games header {
-        background-color:#272727;
     }
     .games_container .row .cell.game {
         background-color:#252523;
