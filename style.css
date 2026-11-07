@@ -331,7 +331,7 @@ main .container img:not(:last-of-type) {
     flex: 0 0 80px; /* fixed width for year column */
     justify-items: center;
 }
-.games_container .year:before {
+.games_container .row:not(.header) .year:not(:empty):before {
     content:'';
     width:36px;
     min-width:36px;
