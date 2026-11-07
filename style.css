@@ -353,15 +353,15 @@ main .container img:not(:last-of-type) {
 }
 .games_container .perfect .game:after {
     content:'';
-    width:36px;
-    min-width:36px;
-    height:36px;
     margin-left:10px;
     display: inline-block;
     background-image: url(img/torch.png);
     background-repeat:no-repeat;
     background-position:center;
     background-size:contain;
+    width:42px;
+    min-width:42px;
+    height:42px;
 }
 .games_container .space {
   background: transparent;
@@ -439,6 +439,11 @@ body.games h3 {
     }
 }
 @media(max-width:900px) {
+    .games_container .perfect .game:after {
+        width:36px;
+        min-width:36px;
+        height:36px;
+    }
     body.games header {
         background-color:#272727;
     }
