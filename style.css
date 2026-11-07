@@ -415,8 +415,8 @@ body.games {
 body.games h3 {
     color:#cac5b1;
 }
-.games_container .row,
-body.games main {
+body.games main,
+.games_container .row {
     background-color:#252523;
 }
 .games_container .row.header {
