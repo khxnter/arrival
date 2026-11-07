@@ -425,7 +425,7 @@ body.games h3 {
     text-transform: uppercase;
 }
 @media(min-width:901px) {
-    .games_container .row:not(.header) .year:not(:empty):before {
+    /* .games_container .row:not(.header) .year:not(:empty):before {
         content:'';
         width:34px;
         min-width:34px;
@@ -436,7 +436,7 @@ body.games h3 {
         background-repeat:no-repeat;
         background-position:center;
         background-size:contain;
-    }
+    } */
 }
 @media(max-width:900px) {
     .games_container .perfect .game:after {
