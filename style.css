@@ -413,10 +413,13 @@ body.games main {
 body.games header {
     background-color:#272727;
 }
-.games_container .row .cell.game {
+.games_container .row {
     background-color:#252523;
 }
 @media(max-width:900px) {
+    .games_container .row .cell.game {
+        background-color:#252523;
+    }
     .container p .box {
         padding:20px;
     }
