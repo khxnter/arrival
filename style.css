@@ -289,8 +289,6 @@ main .container img:not(:last-of-type) {
     flex-direction: column;
     width: 100%;
     margin-bottom:40px;
-    font-family:'d2r', sans-serif;
-    text-transform: uppercase;
 }
 .games_container .row {
     display: flex;
@@ -435,6 +433,8 @@ body.games main {
 }
 .games_container .row.header {
     background-color:#39352d;
+    font-family:'d2r', sans-serif;
+    text-transform: uppercase;
 }
 @media(max-width:900px) {
     body.games header {
