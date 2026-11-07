@@ -591,6 +591,7 @@ body.games main {
         flex:none;
         width:auto;
         font-size:14px;
+        background-color:transparent;
     }
     .games_container .row > .cell:empty {
         padding:0;
