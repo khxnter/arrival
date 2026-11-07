@@ -12,6 +12,12 @@
     font-weight: 400;
     font-style: normal;
 }
+@font-face {
+    font-family: "d2r";
+    src: url("fonts/exocet-blizzard-medium") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
 *,*:before,*:after {
     box-sizing:border-box;
 }
@@ -279,10 +285,12 @@ main .container img:not(:last-of-type) {
 }
 /* Games */
 .games_container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-bottom:40px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom:40px;
+    font-family:'d2r', sans-serif;
+    text-transform: uppercase;
 }
 .games_container .row {
     display: flex;
