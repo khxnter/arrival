@@ -410,13 +410,13 @@ body.games h3 {
 body.games main {
     background-color:#51514f;
 }
-body.games header {
-    background-color:#272727;
-}
 .games_container .row {
     background-color:#252523;
 }
 @media(max-width:900px) {
+    body.games header {
+        background-color:#272727;
+    }
     .games_container .row .cell.game {
         background-color:#252523;
     }
