@@ -334,10 +334,10 @@ main .container img:not(:last-of-type) {
 }
 .games_container .row:not(.header) .year:not(:empty):before {
     content:'';
-    width:36px;
-    min-width:36px;
-    height:36px;
-    margin-right:0;
+    width:34px;
+    min-width:34px;
+    height:34px;
+    margin-right:5px;
     display: inline-block;
     background-image: url(img/amu.png);
     background-repeat:no-repeat;
