@@ -404,6 +404,9 @@ body.games {
     color:#948e76;
     background-color:#51514f;
 }
+body.games h3 {
+    color:#e0e0e0;
+}
 body.games main {
     background-color:#51514f;
 }
@@ -505,7 +508,7 @@ body.games header {
         flex-wrap: wrap;
         position: relative;
         border: 1px solid #a19d84;
-        background-color:#33315f;
+        background-color:#080808;
     }
     .games_container .row ~ .row {
         border-top:0;
@@ -514,7 +517,7 @@ body.games header {
         background-color:transparent;
     }
     .games_container .row .cell.game {
-        background-color:#171630;
+        background-color:#252523;
     }
     .games_container .row.space {
         border:0;
