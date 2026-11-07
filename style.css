@@ -353,6 +353,7 @@ main .container img:not(:last-of-type) {
     background-image: url(img/torch.png);
     background-repeat:no-repeat;
     background-position:center;
+    background-size:container;
 }
 .games_container .space {
   background: transparent;
@@ -400,6 +401,7 @@ main .container img:not(:last-of-type) {
     margin-bottom:20px;
 }
 body.games {
+    color:#948e76;
     background-color:#51514f;
 }
 body.games main {
