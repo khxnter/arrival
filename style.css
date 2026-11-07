@@ -310,14 +310,14 @@ main .container img:not(:last-of-type) {
     padding: 8px 8px;
     align-items:center;
     display: flex;
-    border:1px solid #7d7aa7;
+    border:1px solid #a19d84;
     border-width:1px 0 0 1px;
 }
 .games_container .row:last-of-type .cell {
-    border-bottom:1px solid #7d7aa7;
+    border-bottom:1px solid #a19d84;
 }
 .games_container .row .cell:last-of-type {
-    border-right:1px solid #7d7aa7;
+    border-right:1px solid #a19d84;
 }
 .games_container .year {
     width:80px;
@@ -350,7 +350,7 @@ main .container img:not(:last-of-type) {
     height:24px;
     margin-left:10px;
     display: inline-block;
-    background-image: url(img/stars.svg);
+    background-image: url(img/torch.png);
     background-repeat:no-repeat;
     background-position:center;
 }
@@ -366,7 +366,7 @@ main .container img:not(:last-of-type) {
 .games_container .perfect .cell:nth-of-type(3),
 .games_container .perfect .cell:nth-of-type(4),
 .games_container .perfect .cell:nth-of-type(5) {
-    border-left:1px solid #7d7aa7;
+    border-left:1px solid #a19d84;
 }
 .games_container .perfect .cell:last-of-type {
     border-right:1px solid #e1be14;
@@ -401,6 +401,12 @@ main .container img:not(:last-of-type) {
 }
 body.games {
     background-color:#51514f;
+}
+body.games main {
+    background-color:#51514f;
+}
+body.games header {
+    background-color:#272727;
 }
 @media(max-width:900px) {
     .container p .box {
@@ -496,7 +502,7 @@ body.games {
     .games_container .row {
         flex-wrap: wrap;
         position: relative;
-        border: 1px solid #7d7aa7;
+        border: 1px solid #a19d84;
         background-color:#33315f;
     }
     .games_container .row ~ .row {
@@ -571,6 +577,6 @@ body.games {
     }
     .games_container .row.perfect ~ .row:not(.perfect),
     .games_container .row.perfect + .row:not(.perfect):not(.space) {
-        border-top:1px solid #7d7aa7;
+        border-top:1px solid #a19d84;
     }
 }
