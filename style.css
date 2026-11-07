@@ -326,19 +326,20 @@ main .container img:not(:last-of-type) {
     border-right:1px solid #a19d84;
 }
 .games_container .year {
-    width:80px;
-    max-width:80px;
-    flex: 0 0 80px; /* fixed width for year column */
+    width:100px;
+    max-width:100px;
+    flex: 0 0 100px; /* fixed width for year column */
     justify-items: center;
+    text-align: center;
 }
 .games_container .row:not(.header) .year:not(:empty):before {
     content:'';
     width:36px;
     min-width:36px;
     height:36px;
-    margin-left:10px;
+    margin-right:0;
     display: inline-block;
-    background-image: url(img/torch.png);
+    background-image: url(img/stone.png);
     background-repeat:no-repeat;
     background-position:center;
     background-size:contain;
@@ -348,12 +349,12 @@ main .container img:not(:last-of-type) {
     max-width:300px;
 }
 .games_container .hours {
-    width:70px;
-    max-width:70px;
+    width:85px;
+    max-width:85px;
 }
 .games_container .month {
-    width:75px;
-    max-width:75px;
+    width:90px;
+    max-width:90px;
 }
 .games_container .perfect .game {
     color: #e0ab0d;
