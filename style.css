@@ -332,18 +332,6 @@ main .container img:not(:last-of-type) {
     justify-items: center;
     text-align: center;
 }
-.games_container .row:not(.header) .year:not(:empty):before {
-    content:'';
-    width:34px;
-    min-width:34px;
-    height:34px;
-    margin-right:5px;
-    display: inline-block;
-    background-image: url(img/amu.png);
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:contain;
-}
 .games_container .note {
     width:300px;
     max-width:300px;
@@ -433,6 +421,20 @@ body.games h3 {
     background-color:#39352d;
     font-family:'d2r', sans-serif;
     text-transform: uppercase;
+}
+@media(min-width:901px) {
+    .games_container .row:not(.header) .year:not(:empty):before {
+        content:'';
+        width:34px;
+        min-width:34px;
+        height:34px;
+        margin-right:5px;
+        display: inline-block;
+        background-image: url(img/amu.png);
+        background-repeat:no-repeat;
+        background-position:center;
+        background-size:contain;
+    }
 }
 @media(max-width:900px) {
     body.games header {
