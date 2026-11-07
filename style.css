@@ -297,7 +297,7 @@ main .container img:not(:last-of-type) {
     padding:20px 8px;
 }
 .games_container .row:nth-of-type(even) .cell {
-    background-color:#171630;
+    background-color:#252523;
 }
 .games_container .header .cell.game {
     justify-content: center;
@@ -360,7 +360,7 @@ main .container img:not(:last-of-type) {
   border: none;
 }
 .games_container .perfect .cell {
-    border:1px solid #e1be14;
+    border:1px solid #e0ab0d;
     border-width:1px 0 1px 1px;
 }
 .games_container .perfect .cell:nth-of-type(2),
@@ -370,7 +370,7 @@ main .container img:not(:last-of-type) {
     border-left:1px solid #a19d84;
 }
 .games_container .perfect .cell:last-of-type {
-    border-right:1px solid #e1be14;
+    border-right:1px solid #e0ab0d;
 }
 .games_container .perfect + .perfect > .cell {
     border-top:0;
