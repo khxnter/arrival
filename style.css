@@ -516,7 +516,7 @@ body.games header {
     .games_container .row ~ .row {
         border-top:0;
     }
-    .games_container .row:nth-of-type(even) .cell {
+    .games_container .row:nth-of-type(even) .cel:not(.game) {
         background-color:transparent;
     }
     .games_container .row.space {
