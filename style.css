@@ -413,6 +413,9 @@ body.games main {
 .games_container .row {
     background-color:#252523;
 }
+.games_container .row.header {
+    background-color:#39352d;
+}
 @media(max-width:900px) {
     body.games header {
         background-color:#272727;
