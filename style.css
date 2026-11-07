@@ -338,16 +338,16 @@ main .container img:not(:last-of-type) {
     max-width:75px;
 }
 .games_container .perfect .game {
-    color: #e7d05a;
+    color: #e0ab0d;
 }
 .games_container .perfect .cell {
     padding: 5px 8px;
 }
 .games_container .perfect .game:after {
     content:'';
-    width:38px;
-    min-width:38px;
-    height:38px;
+    width:36px;
+    min-width:36px;
+    height:36px;
     margin-left:10px;
     display: inline-block;
     background-image: url(img/torch.png);
@@ -401,7 +401,7 @@ main .container img:not(:last-of-type) {
     margin-bottom:20px;
 }
 body.games {
-    color:#948e76;
+    color:#cac5b1;
     background-color:#51514f;
 }
 body.games h3 {
@@ -547,7 +547,7 @@ body.games header {
     }
     .games_container .row > .cell.year:not(:empty) {
         font-weight:bold;
-        background-color:#0f0e18;
+        background-color:#39352d;
         justify-content: center;
     }
     .games_container .perfect .game {
@@ -560,6 +560,7 @@ body.games header {
     .games_container .row > .cell.note,
     .games_container .row > .cell.hours,
     .games_container .row > .cell.month {
+        color:#85806b;
         flex:none;
         width:auto;
         font-size:14px;
@@ -572,7 +573,7 @@ body.games header {
         border:0;
     }
     .games_container .row.perfect {
-        border:1px solid #e1be14;
+        border:1px solid #e0ab0d;
     }
     .games_container .row.perfect + .row.perfect {
         border-top:0;
